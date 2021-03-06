@@ -19,8 +19,11 @@ if [ -x "$(command -v docker)" ]; then
 fi
 
 if [ -x "$(command -v git)" ]; then
+    function repo() {
+        git remote -v | head -n1 | awk '{print $2}' | sed 's/.*\///' | sed 's/\.git//'
+    }
     function ref() {
-        git branch --no-color 2>/dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/\[\1\]/" || return;
+        git branch --no-color 2>/dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/\1/" || return;
     }
 
     function sha() {
@@ -34,7 +37,8 @@ PROMPT='';
 PROMPT+='%F{green}%n@%m%f'; # USER
 PROMPT+='%F{yellow}[$(date +%H:%M:%S)]%f'; # DATE
 if [ -x $(command -v git) ]; then
-    PROMPT+='%F{cyan}$(ref)%f'; # GIT REF
+    PROMPT+='%F{red}[$(repo)]%f'; # GIT REPO
+    PROMPT+='%F{cyan}[$(ref)]%f'; # GIT REF
     PROMPT+='%F{magenta}$(sha)%f'; # GIT SHA
 fi
 PROMPT+='%/'; # PATH
