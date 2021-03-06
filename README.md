@@ -10,3 +10,7 @@ ln -s $PWD/dev-profile/.vimrc ${HOME}/.ideavimrc;
 ```
 
 `${HOME}/.zshrc.private` will be sourced if it exists.
+
+##### Special Thanks
+- https://github.com/jtgraphic/configurations
+- https://github.com/daftlabs/dl-dev-profile
