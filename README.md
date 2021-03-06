@@ -6,7 +6,7 @@ _My Favorite Tool Configurations_
 git clone git@github.com:SamuelDavis/dev-profile.git;
 ln -s $PWD/dev-profile/.zshrc ${HOME}/.zshrc;
 ln -s $PWD/dev-profile/.vimrc ${HOME}/.vimrc;
-ln -s $PWD/dev-profile/.vimrc ${HOME}/.ideavimrc;
+ln -s $PWD/dev-profile/.ideavimrc ${HOME}/.ideavimrc;
 ```
 
 `${HOME}/.zshrc.private` will be sourced if it exists.
