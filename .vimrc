@@ -9,10 +9,6 @@ set textwidth=120
 " give cursor room while scrolling
 set scrolloff=3
 
-" highlight searches
-set hlsearch
-set incsearch
-
 " forward-slash search case-insensitive
 set ignorecase
 set smartcase
