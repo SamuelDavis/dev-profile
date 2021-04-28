@@ -4,8 +4,13 @@ _My Favorite Tool Configurations_
 ### Usage
 ```shell 
 git clone git@github.com:SamuelDavis/dev-profile.git;
+# POP!_OS
+ln -s $PWD/dev-profile/.bash_profile ${HOME}/.bash_aliases;
+# OSX
 ln -s $PWD/dev-profile/.zshrc ${HOME}/.zshrc;
+# VIM
 ln -s $PWD/dev-profile/.vimrc ${HOME}/.vimrc;
+# JETBRAINS
 ln -s $PWD/dev-profile/.ideavimrc ${HOME}/.ideavimrc;
 ```
 
